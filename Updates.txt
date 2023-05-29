@@ -1,0 +1,7 @@
+1- Ajustar las bolas del juego
+2- Repetir numeros o no
+3- Mostrar los puntajes
+4- Mejor forma de representar la victoria
+5- Menu (Volver al menu de inicio, reiniciar partida, mostrar puntajes)
+
+-----Reacerlo en React

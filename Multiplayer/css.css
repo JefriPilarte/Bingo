@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 100ms;
+}
+
+body {
+  background-color: rgb(30, 30, 30);
+  color: rgb(224, 224, 224);
+  font-family: "kanit";
+  user-select: none;
+  color: rgba(255, 255, 255, 0.884);
+}
+
+body::-webkit-scrollbar {
+  width: 0.01px;
+}
+
+header {
+  font-family: "Kanit";
+  font-size: 3.8vw;
+  text-align: center;
+  text-shadow: 0px 0px 10px #000;
+  letter-spacing: 0.8vw;
+  background: rgb(40, 40, 40);
+  border-bottom: solid 0.5vh rgb(20, 20, 20);
+  padding: 2vh;
+}
+
+button {
+  float: left;
+  background: rgb(35, 35, 35);
+  border: solid 0.2vw #777777;
+  padding: 0.8vw;
+  cursor: pointer;
+}
+
+.buttonLink {
+  text-decoration: none;
+  color: white;
+  font-family: "Kanit";
+  font-size: 1.7vw;
+}
+
+button:hover {
+  border: solid 0.2vw #e0e0e0;
+  background: rgb(20, 20, 20);
+  border-radius: 20%;
+}
+
+.button-link-responsive {
+  display: none;
+}
+
+.container {
+  width: 85%;
+  height: min-content;
+  margin: 2vw auto 5vw auto;
+  padding-bottom: 4vw;
+  background: #0e0e0eb2;
+  border: solid 0.5vw #353535e7;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr, 0.8fr, 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.player {
+  background: rgb(45, 45, 45);
+  border: solid 0.2vw #777777;
+  width: 25vw;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 10;
+}
+
+.player .num1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.player .num2 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.playerBanner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vw;
+  letter-spacing: 0.2vw;
+  text-shadow: 0px 0px 4px #202020;
+  border: solid 0.2vw #777777;
+  background: radial-gradient(#313131, #121212);
+}
+
+.item {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2vw;
+  align-items: center;
+  background: #1d1d1d22;
+  border: solid 0.2vw #777777;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #1d1d1d;
+}
+
+.itemTached {
+  text-decoration-line: line-through;
+  background: radial-gradient(#222222, #111111);
+  color: #888888;
+  font-weight: bolder;
+  pointer-events: none;
+}
+
+.itemTached:hover {
+  background: radial-gradient(#222222, #111111);
+}
+
+.ball {
+  width: 17vw;
+  height: 17vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid 0.4vw #686868;
+  background: radial-gradient(#444444, #111111);
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  cursor: pointer;
+}
+
+.ball:hover {
+  filter: brightness(115%);
+}
+
+.itemBall {
+  height: 5.8vw;
+  width: 5.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3vw;
+  background: radial-gradient(#222222, #111111);
+  border: solid 0.2vw #808080;
+}
+
+.record {
+  width: 90%;
+  height: 21vw;
+  border: solid 0.4vw #5c5c5c;
+  padding: 0.5vw;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+}
+
+.itemRecord {
+  height: min-content;
+  width: 2.90vw;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.4vw;
+  margin: 0.31vw;
+  padding: 0.2vw;
+  background: #222222;
+  border: solid 0.2vw #5c5c5c;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    transform: translateY(-1vw);
+    font-size: 5.8vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .buttonLink,
+  button {
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .player {
+    width: 80%;
+    height: 45vw;
+    margin: 7vw 0;
+  }
+
+  .item {
+    font-size: 3.8vw;
+  }
+  .playerBanner {
+    font-size: 5vw;
+  }
+
+  .ball {
+    width: 24vw;
+    height: 24vw;
+  }
+
+  .itemBall {
+    font-size: 6.2vw;
+    padding: 5.1vw;
+  }
+
+  .item:hover {
+    background: #1d1d1d22;
+  }
+
+  .record {
+    min-height: 9vw;
+    height: min-content;
+  }
+
+  .itemRecord {
+    font-size: 4vw;
+    width: 10.4vw;
+  }
+
+  .button-link-responsive {
+    display: flex;
+    background: rgb(35, 35, 35);
+    border: solid 0.2vw #777777;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-family: "Kanit";
+    margin: 0 auto 10vw auto;
+    padding: 2vw;
+    font-size: 3vw;
+    width: 80%;
+    justify-content: center;
+  }
+}
